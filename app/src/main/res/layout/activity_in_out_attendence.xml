@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3373bd"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="In/Out Attendance"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="ALL TUTORING TIMES MUST BE ENTERED IN 15 MINUTE INCREMENTS"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/holo_red_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tutorTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/white">
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:dropDownVerticalOffset="40dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submitBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#4a9ff2"
+            android:onClick="onClick"
+            android:text="SUBMIT"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3373bd">
+
+        <RelativeLayout
+            android:id="@+id/calenderRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#3373bd"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/tutorHrsLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Tutoring Hrs Left : " />
+
+                <TextView
+                    android:id="@+id/tutorHrsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textColor="@android:color/holo_red_dark" />
+            </LinearLayout>
+
+            <com.stacktips.view.CustomCalendarView
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tutorHrsLL"
+                android:layout_gravity="bottom"
+                android:background="#3373bd"
+                android:gravity="bottom"
+                android:padding="10dp"
+                app:calendarBackgroundColor="@color/white"
+                app:calendarTitleTextColor="@color/white"
+                app:currentDayOfMonthColor="@color/white"
+                app:dayOfMonthTextColor="@color/black"
+                app:dayOfWeekTextColor="@android:color/black"
+                app:disabledDayBackgroundColor="@color/off_white"
+                app:disabledDayTextColor="@color/grey"
+                app:titleLayoutBackgroundColor="#3373bd"
+                app:weekLayoutBackgroundColor="#3373bd" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

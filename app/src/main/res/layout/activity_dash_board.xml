@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="3">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+
+        android:orientation="vertical">
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@drawable/horizantal_line">-->
+
+        <!--</View>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/veritcle_line">-->
+
+            <!--</View>-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/accountSummeryTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="2dp"
+                    android:drawableTop="@drawable/account_summry"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:onClick="onClick"
+                    android:padding="6dp"
+                    android:text="Account Summary"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
+
+                <!--<View-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@drawable/horizantal_line">-->
+
+                <!--</View>-->
+
+                <TextView
+                    android:id="@+id/attendenceReportTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/attedance_report_icon"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:onClick="onClick"
+                    android:padding="6dp"
+                    android:text="Attendance Report"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/veritcle_line"></View>-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/studentsTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/student_icon"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:text="Students"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
+
+                <!--<View-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@drawable/horizantal_line">-->
+
+                <!--</View>-->
+
+                <TextView
+                    android:id="@+id/timeCardTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/time_card"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:text="time card"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/veritcle_line"></View>-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/inoutAttendenceTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@drawable/in_out_attendance_icon"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:onClick="onClick"
+                    android:padding="6dp"
+                    android:text="In/out attendance"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
+
+                <!--<View-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@drawable/horizantal_line">-->
+
+                <!--</View>-->
+
+                <TextView
+                    android:id="@+id/downloadFormTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/student_pdf"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:text="Download form"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/veritcle_line"></View>-->
+        </LinearLayout>
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@drawable/horizantal_line">-->
+
+        <!--</View>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progrssLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/progress_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClick">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/camera_icon"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Progress Report"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logoutBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/logout_button"
+        android:onClick="onClick" />
+</LinearLayout>
